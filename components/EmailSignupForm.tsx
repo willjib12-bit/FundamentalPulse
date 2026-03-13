@@ -28,13 +28,15 @@ export function EmailSignupForm({ variant = 'primary' }: { variant?: 'primary' |
     setFormState({ status: 'submitting', message: '' })
 
     try {
+      const formData = new FormData()
+      formData.append('email', email)
+
       const response = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || '', {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        body: JSON.stringify({ email }),
       })
 
       if (response.ok) {
