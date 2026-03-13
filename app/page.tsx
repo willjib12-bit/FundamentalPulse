@@ -1,6 +1,6 @@
 import { DemoAnimatedBriefCard } from '@/components/DemoAnimatedBriefCard'
-import { FAQSection } from '@/components/FAQSection'
-import { EmailSignupForm } from '@/components/EmailSignupForm'
+import FAQSection from '@/components/FAQSection'
+import EmailSignupForm from '@/components/EmailSignupForm'
 
 export default function Home() {
   return (

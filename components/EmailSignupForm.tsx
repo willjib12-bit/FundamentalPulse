@@ -7,7 +7,7 @@ interface FormState {
   message: string
 }
 
-export function EmailSignupForm({ variant = 'primary' }: { variant?: 'primary' | 'secondary' }) {
+export default function EmailSignupForm({ variant = 'primary' }: { variant?: 'primary' | 'secondary' }) {
   const [email, setEmail] = useState('')
   const [formState, setFormState] = useState<FormState>({ status: 'idle', message: '' })
 

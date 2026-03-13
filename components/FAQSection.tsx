@@ -22,7 +22,7 @@ const faqData: FAQItem[] = [
   }
 ]
 
-export function FAQSection() {
+export default function FAQSection() {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set())
 
   const toggleItem = (index: number) => {
